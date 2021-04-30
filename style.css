@@ -1,18 +1,109 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: "Rubik", sans-serif;
-  display:flex;
-  flex-direction: column;
-  align-items:center;
-  justify-content: center;
-  height: 100vh;
-  overflow: hidden;
-  margin: 0;
+    margin: 0;
+    font-family: "Rubik", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #051b29;
+    margin: 0;
+}
 
+.container {
+    width: 400px;
+    height: 400px;
+    background-color: #051b29;
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+.hour {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #f0186c;
+    width: 100px;
+    border-radius: 0 20px 20px 0;
+    height: 10px;
+    transform-origin: 0%;
+    transform: rotate(-90deg);
+}
+
+.minute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 0 20px 20px 0;
+    background-color: #fffeff;
+    width: 125px;
+    height: 5px;
+    transform-origin: 0%;
+    transform: rotate(-90deg);
+}
+
+.second {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 0 20px 20px 0;
+    background-color: #fffeff;
+    width: 150px;
+    height: 3px;
+    transform-origin: 0%;
+    transform: rotate(-90deg);
+}
+
+.hour-marking {
+    position: absolute;
+    top: 50%;
+    transform-origin: 0%;
+    left: 50%;
+    color: white;
+}
+
+.hour-inner {
+    font-size: 1.5rem;
+}
+
+.minute-marking {
+    position: absolute;
+    top: 50%;
+    transform-origin: 0%;
+    left: 50%;
+    color: white;
+}
+
+.minute-inner {
+    font-size: 1.5rem;
+}
+
+.normal {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    color: white;
+    transform-origin: 0%;
+    font-size: 1.5rem;
+    transform: rotate(90deg) translate(100px) translateY(-100px) translate(-15%);
+}
+
+.needle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #f0186c;
+    width: 20px;
+    border-radius: 20px 20px 20px 20px;
+    height: 20px;
+    transform-origin: 0%;
+    transform: translateX(-50%) translateY(-20%);
+    z-index: 100;
 }
